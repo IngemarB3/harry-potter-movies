@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="form-group">
+        <h3>Filters</h3>
+        Title <input type="text" class="form-control" placeholder="Filter by title" [(ngModel)]="titleFilter" (input)="filterMovies()">
+        Release year <input type="text" class="form-control" placeholder="Filter by release year" [(ngModel)]="releaseYearFilter" (input)="filterMovies()">
+    </div>
+
+@for (movie of filteredMovies; track movie) {
+    <div class="movie">
+        <div class="left">
+            <h4>{{movie.title}}</h4>
+
+            <div class="about">
+                Release date: {{movie.release_date}} Budget: {{movie.budget | million}} Duration: {{movie.duration | duration}}            
+            </div>
+        </div>
+        <div class="right">
+            <button [id]="movie.id" (click)="showDetails(movie)">Details</button>
+        </div>
+    </div> 
+}
+</div>

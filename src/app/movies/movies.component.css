@@ -1,0 +1,29 @@
+.container {
+    padding: 0.5em;
+
+    .movie {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+        margin-left: 1em;
+        margin-bottom: 1em;
+        border-bottom: 1px solid gray;  
+    
+        .left {
+            display: flex;
+            flex-direction: column;
+            width: 50%;        
+    
+            .about {
+                display: flex;
+                justify-content: space-between;        
+                margin-left: 2em;
+                font-size: smaller;
+            }
+        }
+    
+        .right {
+            padding-right: 5em;
+        }
+    }
+}

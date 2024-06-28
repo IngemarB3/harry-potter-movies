@@ -1,0 +1,25 @@
+.container {
+    width: 70%;
+    
+    .hero {
+        display: flex;        
+    
+        .summary {
+            padding: 0.5em 12em 0.5em 2em;
+        }
+    }
+    
+    .details {
+        display: flex;
+        flex-direction: column;
+        width: 25em;
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;       
+        }
+    }
+}

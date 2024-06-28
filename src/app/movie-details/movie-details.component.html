@@ -1,0 +1,40 @@
+<div class="container">
+    <button (click)="navigateToMovieList()">Back</button>
+
+@if (movie) {
+    <div class="title">
+        <h2>{{movie.title}}</h2>
+    </div>
+
+    <div class="hero">        
+        <div class="poster">
+            <img [src]="movie.poster" alt="">
+        </div>
+
+        <div class="summary">
+            {{movie.summary}}
+        </div>
+    </div>
+
+    <div class="details">
+        <h3>Details</h3>
+
+        <div class="details-grid">
+            <div class="item">Box Office</div>
+            <div class="item">{{movie.box_office | million }}</div>
+    
+            <div class="item">Budget</div>
+            <div class="item">{{movie.budget | million }}</div>
+    
+            <div class="item">Duration</div>
+            <div class="item">{{movie.duration | duration }}</div>
+    
+            <div class="item">Producers</div>
+            <div class="item">{{movie.producers }}</div>
+    
+            <div class="item">Cinematographers</div>
+            <div class="item">{{movie.cinematographers }}</div>
+        </div>        
+    </div>
+}
+</div>
